@@ -38,7 +38,7 @@ const renderSong = () => {
 
 
 
-//Update the bar based on the current time of the song duration
+//Update the bar based on the current time of the song duration.
 const updateProgressBar = (e) => {
     const {duration, currentTime} = e.target
     timeFormat(duration)
@@ -51,7 +51,7 @@ const updateProgressBar = (e) => {
 
 //Seeking function
 const setProgressBar = (e) => {
-    const width = e.target.clientWidth
+    const width = progressContainer.clientWidth
     const clickX = e.offsetX
     const {duration} = audio
     audio.currentTime = (clickX / width) * duration
